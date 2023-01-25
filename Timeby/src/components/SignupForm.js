@@ -1,50 +1,50 @@
-import React from "react";
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from 'react'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
-import signupService from "../services/signupService";
+import signupService from '../services/signupService'
 
 const SignupForm = () => {
-  const [userName, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
+  const [userName, setLogin] = useState('')
+  const [password, setPassword] = useState('')
+  const [name, setName] = useState('')
+  const [surname, setSurname] = useState('')
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const userNameHandler = (event) => {
-    setLogin(event.target.value);
-  };
+    setLogin(event.target.value)
+  }
   const passwordHandler = (event) => {
-    setPassword(event.target.value);
-  };
+    setPassword(event.target.value)
+  }
   const nameHandler = (event) => {
-    setName(event.target.value);
-  };
+    setName(event.target.value)
+  }
   const surnameHandler = (event) => {
-    setSurname(event.target.value);
-  };
+    setSurname(event.target.value)
+  }
 
   const signupHandler = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     try {
       const res = await signupService.signup({
         userName,
         password,
         name,
         surname,
-      });
+      })
       if (res) {
-        alert("you have signed up successfully");
-        navigate("/login");
+        alert('you have signed up successfully')
+        navigate('/login')
       }
     } catch (err) {
-      alert("username is already taken");
+      alert('username is already taken')
     }
-    setLogin("");
-    setPassword("");
-    setName("");
-    setSurname("");
-  };
+    setLogin('')
+    setPassword('')
+    setName('')
+    setSurname('')
+  }
   return (
     <div className="mainContainerLoginForm">
       <form onSubmit={signupHandler}>
@@ -75,6 +75,6 @@ const SignupForm = () => {
         <Link to="/">Back</Link>
       </form>
     </div>
-  );
-};
-export default SignupForm;
+  )
+}
+export default SignupForm

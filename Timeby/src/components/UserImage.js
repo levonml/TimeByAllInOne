@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 const UserImage = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null)
   return (
     <div>
       {selectedImage && (
         <div>
           <img
             alt="not found"
-            width={"250px"}
+            width={'250px'}
             src={URL.createObjectURL(selectedImage)}
           />
           <br />
@@ -19,11 +19,11 @@ const UserImage = () => {
         type="file"
         name="myImage"
         onChange={(event) => {
-          console.log(event.target.files[0]);
-          setSelectedImage(event.target.files[0]);
+          console.log(event.target.files[0])
+          setSelectedImage(event.target.files[0])
         }}
       />
     </div>
-  );
-};
-export default UserImage;
+  )
+}
+export default UserImage

@@ -1,38 +1,38 @@
-import React from "react";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { logIn } from "../redux/reducers/signinReducer";
-import { useNavigate } from "react-router-dom";
-import "./stylesheets/stylesheet.css";
+import React from 'react'
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { logIn } from '../redux/reducers/signinReducer'
+import { useNavigate } from 'react-router-dom'
+import './stylesheets/stylesheet.css'
 
 const LoginForm = () => {
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const [login, setLogin] = useState('')
+  const [password, setPassword] = useState('')
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
-  let loggedUser = useSelector((state) => state.currentUser.userName);
+  let loggedUser = useSelector((state) => state.currentUser.userName)
   const userNameHandler = (event) => {
-    setLogin(event.target.value);
-  };
+    setLogin(event.target.value)
+  }
   const passwordHandler = (event) => {
-    setPassword(event.target.value);
-  };
+    setPassword(event.target.value)
+  }
   const loginHandler = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     if (loggedUser) {
-      alert("you are already logged on");
-      navigate(`/${loggedUser}`);
+      alert('you are already logged on')
+      navigate(`/${loggedUser}`)
     } else {
-      setLogin("");
-      setPassword("");
-      dispatch(logIn({ login, password }));
+      setLogin('')
+      setPassword('')
+      dispatch(logIn({ login, password }))
       if (login && password) {
-        navigate(`/${login}/home`);
+        navigate(`/${login}/home`)
       }
     }
-  };
+  }
   return (
     <div className="mainContainerLoginForm">
       <form onSubmit={loginHandler}>
@@ -52,6 +52,6 @@ const LoginForm = () => {
         <Link to="/">Back</Link>
       </form>
     </div>
-  );
-};
-export default LoginForm;
+  )
+}
+export default LoginForm

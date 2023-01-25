@@ -1,12 +1,12 @@
-import axios from "axios";
+import axios from 'axios'
 
-const baseUrl = "/api/signup";
+const baseUrl = '/api/signup'
 const signup = async (credentials) => {
   try {
-    const user = await axios.post(baseUrl, credentials);
-    return user;
+    const user = await axios.post(baseUrl, credentials)
+    return user
   } catch (error) {
-    alert("selected username is already taken");
+    alert('selected username is already taken')
   }
-};
-export default { signup };
+}
+export default { signup }

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import SignupButtonFromFrontPage from "./SignupButtonFromFrontPage";
-import "./stylesheets/stylesheet.css";
+import SignupButtonFromFrontPage from './SignupButtonFromFrontPage'
+import './stylesheets/stylesheet.css'
 
 const FrontPage = () => {
   return (
@@ -14,6 +14,6 @@ const FrontPage = () => {
       </div>
       <SignupButtonFromFrontPage />
     </div>
-  );
-};
-export default FrontPage;
+  )
+}
+export default FrontPage

@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import signinReducer from "./reducers/signinReducer";
-import contentReducer from "./reducers/contentReducer";
-import userReducer from "./reducers/userReducer";
-import yearPageReducer from "./reducers/yearPageReducer";
-import navReducer from "./reducers/navReducer";
-import showUserReducer from "./reducers/showUserReducer";
+import { configureStore } from '@reduxjs/toolkit'
+import signinReducer from './reducers/signinReducer'
+import contentReducer from './reducers/contentReducer'
+import userReducer from './reducers/userReducer'
+import yearPageReducer from './reducers/yearPageReducer'
+import navReducer from './reducers/navReducer'
+import showUserReducer from './reducers/showUserReducer'
 
 const store = configureStore({
   reducer: {
@@ -15,5 +15,5 @@ const store = configureStore({
     dropDown: navReducer,
     showUsers: showUserReducer,
   },
-});
-export default store;
+})
+export default store

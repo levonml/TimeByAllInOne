@@ -1,34 +1,34 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 
-import { setDropDown } from "../redux/reducers/navReducer";
-import navStyle from "./style/navStyle";
-import "./stylesheets/stylesheet.css";
+import { setDropDown } from '../redux/reducers/navReducer'
+import navStyle from './style/navStyle'
+import './stylesheets/stylesheet.css'
 
 const LoginButton = () => {
-  let [fontSize, setFontSize] = useState(navStyle.buttonLeave);
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+  let [fontSize, setFontSize] = useState(navStyle.buttonLeave)
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const style = {
-    background: "none",
+    background: 'none',
     transform: `scale(${fontSize})`,
-  };
+  }
 
-  const dropDown = useSelector((state) => state.dropDown);
-  const user = useSelector((state) => state.currentUser.userName);
+  const dropDown = useSelector((state) => state.dropDown)
+  const user = useSelector((state) => state.currentUser.userName)
 
   const signOutHandle = () => {
-    dispatch(setDropDown(!dropDown));
-    localStorage.clear();
-    navigate("/");
-    location.reload();
-  };
+    dispatch(setDropDown(!dropDown))
+    localStorage.clear()
+    navigate('/')
+    location.reload()
+  }
   const logInHandle = () => {
-    dispatch(setDropDown(!dropDown));
-    navigate("/login");
-  };
+    dispatch(setDropDown(!dropDown))
+    navigate('/login')
+  }
   return (
     <div>
       {user ? (
@@ -53,6 +53,6 @@ const LoginButton = () => {
         </button>
       )}
     </div>
-  );
-};
-export default LoginButton;
+  )
+}
+export default LoginButton

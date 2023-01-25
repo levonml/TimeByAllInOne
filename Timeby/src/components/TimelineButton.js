@@ -1,26 +1,26 @@
-import React from "react";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import React from 'react'
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
-import { setDropDown } from "../redux/reducers/navReducer";
-import navStyle from "./style/navStyle";
-import "./stylesheets/stylesheet.css";
+import { setDropDown } from '../redux/reducers/navReducer'
+import navStyle from './style/navStyle'
+import './stylesheets/stylesheet.css'
 
 const Timeline = () => {
-  let [fontSize, setFontSize] = useState(navStyle.buttonLeave);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  let [fontSize, setFontSize] = useState(navStyle.buttonLeave)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const style = {
-    background: "none",
+    background: 'none',
     transform: `scale(${fontSize})`,
-  };
-  const dropDown = useSelector((state) => state.dropDown);
-  const user = useSelector((state) => state.currentUser.userName);
+  }
+  const dropDown = useSelector((state) => state.dropDown)
+  const user = useSelector((state) => state.currentUser.userName)
   const timeLineHandle = () => {
-    dispatch(setDropDown(!dropDown));
-    navigate(`/${user}/timeline`);
-  };
+    dispatch(setDropDown(!dropDown))
+    navigate(`/${user}/timeline`)
+  }
   return (
     <div>
       {user ? (
@@ -37,6 +37,6 @@ const Timeline = () => {
         <></>
       )}
     </div>
-  );
-};
-export default Timeline;
+  )
+}
+export default Timeline
