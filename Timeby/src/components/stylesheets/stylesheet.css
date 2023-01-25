@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.burger {
+  visibility: hidden;
+}
+.mainContainer {
+  margin: 0 5em;
+}
+/*nav bar*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoContainer {
+  /* flex-grow: 1; */
+  margin-left: 1em;
+}
+.logo {
+  background: white;
+  border-radius: 5em;
+  padding: 0.3em;
+}
+.searchBarInputContainer {
+  /* margin: 0 3e auto 0; */
+
+  background: white;
+  opacity: 0.8;
+  border-radius: 5em;
+  padding: 0.3em 1em;
+  display: flex;
+  flex-grow: 1;
+}
+.searchBarInputContainer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.searchBarInputContainer button:hover {
+  transform: scale(1.2);
+}
+.searchBarInput {
+  background: white;
+  padding: 0.3em 1em;
+  width: 100%;
+  border: none;
+  opacity: 0.8;
+  outline: none;
+}
+
+.navButton {
+  color: rgb(235, 232, 232);
+  border: none;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+/*front page*/
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.frontPageMainContainer {
+  color: rgb(205, 199, 212);
+  font-family: cursive;
+  font-size: 2em;
+  margin: 2em auto;
+}
+.frontPageMainContainer .one {
+  animation: transitionIn 2.5s;
+}
+.frontPageMainContainer .two {
+  animation: transitionIn 4.5s;
+}
+.frontPageMainContainer .three {
+  animation: transitionIn 6.5s;
+}
+.signupButtonFromFrontPage button {
+  padding: 0.8em 2em;
+  background: rgb(245, 215, 48);
+  opacity: 0.9;
+  border: none;
+  border-radius: 1em;
+  color: rgb(56, 59, 209);
+  font-size: 1.5em;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
+  margin-right: 3em;
+}
+.signupButtonFromFrontPage button:hover {
+  transform: scale(1.1);
+  color: aliceblue;
+}
+
+/* loginForm */
+
+.mainContainerLoginForm {
+  width: 50%;
+  margin: 2em auto;
+  padding: 5em 0.3em;
+  display: flex;
+  border-radius: 1em;
+  background-color: white;
+  opacity: 0.7;
+}
+.mainContainerLoginForm form {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: rgb(41, 38, 38);
+}
+.mainContainerLoginForm form div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.4em;
+}
+.mainContainerLoginForm form div input {
+  width: 100%;
+  border: none;
+  padding: 0.5em;
+  background: none;
+  outline: none;
+  border-bottom: 0.1em solid rgb(34, 32, 32);
+}
+
+.mainContainerLoginForm form button {
+  background-color: #505349;
+  border-radius: 0.3em;
+  border: none;
+  padding: 0.5em;
+  font-size: medium;
+  color: white;
+}
+/* UserYearPage */
+.yearTextInput {
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0.5em;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(183, 166, 223);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b43f91;
+}
+/* timeline */
+.timelineAddYearInput {
+  background: #bdbcc0;
+  padding: 0.5em;
+  margin: 1em;
+  border-radius: 0.5em;
+  border: none;
+  opacity: 0.7;
+}
+.timelineAddYearButton {
+  background: #08070c;
+  padding: 0.4em 0.6em;
+  color: white;
+  margin: 0.5em;
+  border-radius: 0.5em;
+  border: none;
+  opacity: 0.8;
+}
+.timelineAddYearButton:hover {
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 640px) {
+  .navButton {
+    color: rgb(235, 232, 232);
+    border: none;
+    padding: 1em;
+    width: 100%;
+  }
+  .burger {
+    visibility: visible;
+    background: none;
+    border: none;
+    color: rgb(235, 232, 232);
+    font-size: 1.2em;
+  }
+  .mainContainer {
+    margin: 0 1em;
+  }
+  .navBar {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #3d1085;
+    width: 100%;
+  }
+  .navBarOpen {
+    transition: 0.5s;
+    transform: translateY(110vh);
+  }
+  .navBarClose {
+    transition: 0.5s;
+    transform: translateY(-108vh);
+  }
+  .mainContainerLoginForm {
+    width: 90%;
+  }
+  .frontPageMainContainer {
+    margin-top: 1em;
+    font-size: 1.8em;
+  }
+  .signupButtonFromFrontPage button {
+    padding: 0.6em 1.6em;
+    font-size: 1.3em;
+    margin-right: 2em;
+  }
+  .logo {
+    padding: 0.1em;
+  }
+  .logoContainer {
+    margin-left: 0.5em;
+  }
+  .searchBarInputContainer {
+    padding: 0.1em 0.5em;
+  }
+  .searchBarInput {
+    padding: 0.3em 0;
+    min-width: 2em;
+  }
+}
