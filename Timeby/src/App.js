@@ -21,7 +21,7 @@ const App = () => {
   document.body.style.backgroundRepeat = 'no-repeat'
   document.body.style.backgroundPosition = 'center center'
   document.body.style.backgroundAttachment = 'fixed'
-  document.title = 'TimeBy';
+  document.title = 'TimeBy'
 
   const navBar = {
     background: 'none',
