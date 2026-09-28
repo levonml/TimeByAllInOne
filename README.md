@@ -1,4 +1,4 @@
-# TimeByAllInOne
+# Time By All In One
 
 Monorepo with:
 - Node.js/Express API (root)
