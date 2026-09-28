@@ -13,4 +13,4 @@ npm run dev
 ## Useful scripts
 - `npm test` — run backend tests
 - `npm run lint` — lint backend
-- `npm run build:ui` — build React app into `/build`
+- `npm run build:ui` — build React app and copy output to root `/build`
