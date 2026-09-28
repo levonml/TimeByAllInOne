@@ -2,7 +2,7 @@
 
 Monorepo with:
 - Node.js/Express API (root)
-- React client (`/Timeby`)
+- React client (`Timeby/`)
 
 ## Quick start
 ```bash
